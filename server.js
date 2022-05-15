@@ -9,5 +9,5 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.listen(3001, () => console.log('Running server'));
+app.listen(process.env.PORT || 3001, () => console.log('Running server'));
 
