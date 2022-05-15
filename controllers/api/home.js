@@ -1,10 +1,11 @@
 
 const router = require('express').Router();
-const path = require('path');
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    console.log('Received home api request');
+    res.json({ message: 'home api' });
 });
 
 module.exports = router;
+
 
